@@ -53,7 +53,7 @@ class Header extends StatelessWidget {
                   child: TextFormField(
                     cursorColor: Colors.black,
                     decoration: InputDecoration(
-                      hintText: 'Search your favourite food ',
+                      hintText: 'Search your favorite food ',
                       border: OutlineInputBorder(borderSide: BorderSide.none),
                       contentPadding: const EdgeInsets.all(10.0),
                       prefixIcon: IconButton(
@@ -70,7 +70,7 @@ class Header extends StatelessWidget {
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please search a favourite food';
+                        return 'Please search a favorite food';
                       }
                       return null;
                     },
