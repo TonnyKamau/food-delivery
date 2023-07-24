@@ -43,38 +43,54 @@ class Header extends StatelessWidget {
               ),
             ]),
           ),
-          Form(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Material(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(25.0),
-                  child: TextFormField(
-                    cursorColor: Colors.black,
-                    decoration: InputDecoration(
-                      hintText: 'Search your favorite food ',
-                      border: OutlineInputBorder(borderSide: BorderSide.none),
-                      contentPadding: const EdgeInsets.all(10.0),
-                      prefixIcon: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.search, color: Colors.black),
-                      ),
-                      suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.tune_outlined,
-                          color: Colors.black,
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: TextFormField(
+              cursorColor: Colors.black,
+              decoration: InputDecoration(
+                hintText: "Search your favorite food ",
+                hintStyle:
+                    Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: Colors.grey.shade500,
                         ),
-                      ),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please search a favorite food';
-                      }
-                      return null;
-                    },
+                prefixIcon: Container(
+                  margin:
+                      const EdgeInsets.only(right: 5, bottom: 5, top: 5),
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                        20), // half of the width or height
                   ),
+                  child: const Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  ),
+                ),
+                suffixIcon: Container(
+                  margin:
+                      const EdgeInsets.only(left: 5, bottom: 5, top: 5),
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                        20), // half of the width or height
+                  ),
+                  child: const RotatedBox(
+                    quarterTurns: 3,
+                    child: Icon(
+                      Icons.tune,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                filled: true,
+                fillColor: Colors.grey.shade200,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide.none,
                 ),
               ),
             ),
