@@ -57,14 +57,21 @@ class Header extends StatelessWidget {
                       border: OutlineInputBorder(borderSide: BorderSide.none),
                       contentPadding: const EdgeInsets.all(10.0),
                       prefixIcon: IconButton(
+                        splashColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onPressed: () {},
                         icon: Icon(Icons.search, color: Colors.black),
                       ),
-                      suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.tune_outlined,
-                          color: Colors.black,
+                      suffixIcon: RotatedBox(
+                        quarterTurns: 1,
+                        child: IconButton(
+                          splashColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.tune_outlined,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
