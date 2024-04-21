@@ -13,8 +13,7 @@ class Header extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            // ignore: prefer_const_literals_to_create_immutables
-            child: Row(children: [
+            child: Row(children: const [
               Text(
                 'Get Your ',
                 style: TextStyle(
@@ -46,11 +45,11 @@ class Header extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: TextFormField(
-              cursorColor: Colors.black,
+              cursorColor: Theme.of(context).colorScheme.inversePrimary,
               decoration: InputDecoration(
                 hintText: "Search your favorite food ",
                 hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Colors.grey.shade500,
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                 prefixIcon: Container(
                   margin: const EdgeInsets.only(right: 5, bottom: 5, top: 5),
@@ -59,9 +58,9 @@ class Header extends StatelessWidget {
                     borderRadius: BorderRadius.circular(
                         20), // half of the width or height
                   ),
-                  child: const Icon(
+                  child:  Icon(
                     Icons.search,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.inversePrimary,
                   ),
                 ),
                 suffixIcon: Container(
@@ -71,16 +70,16 @@ class Header extends StatelessWidget {
                     borderRadius: BorderRadius.circular(
                         20), // half of the width or height
                   ),
-                  child: const RotatedBox(
+                  child: RotatedBox(
                     quarterTurns: 3,
                     child: Icon(
                       Icons.tune,
-                      color: Colors.black,
+                      color: Theme.of(context).colorScheme.inversePrimary,
                     ),
                   ),
                 ),
                 filled: true,
-                fillColor: Colors.grey.shade200,
+                fillColor: Theme.of(context).colorScheme.secondary,
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
                   borderSide: BorderSide.none,
@@ -118,7 +117,7 @@ class Header extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Container(
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.tertiary,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -126,7 +125,7 @@ class Header extends StatelessWidget {
                     child: Center(
                       child: Material(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.black,
+                        color: Theme.of(context).colorScheme.inversePrimary,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 20.0,
@@ -134,7 +133,7 @@ class Header extends StatelessWidget {
                           ),
                           child: Text(
                             'Salads',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Theme.of(context).colorScheme.tertiary,)
                           ),
                         ),
                       ),

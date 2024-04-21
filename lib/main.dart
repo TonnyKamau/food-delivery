@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/main/homepage.dart';
+import 'package:food_delivery/pages/login_page.dart';
+import 'package:food_delivery/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,11 +22,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        // is not restarted.
-       fontFamily: 'BeVietnamPro',
-      ),
-      home: const HomePage(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
+      home: LoginPage(),
     );
   }
 }

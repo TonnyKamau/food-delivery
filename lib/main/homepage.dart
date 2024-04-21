@@ -1,8 +1,6 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_delivery/utils/header.dart';
+import 'package:food_delivery/components/header.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,7 +17,7 @@ class HomePage extends StatelessWidget {
       initialIndex: 0,
       length: tabs.length,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.background,
         appBar: AppBar(
           leading: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -27,7 +25,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {},
               icon: FaIcon(
                 FontAwesomeIcons.bars,
-                color: Colors.black,
+                color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
           ),
@@ -38,7 +36,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {},
                 icon: FaIcon(
                   FontAwesomeIcons.magnifyingGlass,
-                  color: Colors.black,
+                  color: Theme.of(context).colorScheme.inversePrimary,
                 ),
               ),
             ),
