@@ -3,180 +3,136 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
+ 
   const Header({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(children: const [
-              Text(
-                'Get Your ',
-                style: TextStyle(
-                  fontSize: 30.0,
-                ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                fontSize: 30,
+                fontFamily: 'OpenSans',
+                color: Theme.of(context).colorScheme.onTertiary,
               ),
-              Text(
-                'Best',
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-              ),
-            ]),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            // ignore: prefer_const_literals_to_create_immutables
-            child: Row(children: [
-              Text(
-                'Food ',
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Around You',
-                style: TextStyle(
-                  fontSize: 30.0,
+              text: 'Get',
+              children: const [
+                TextSpan(
+                  text: ' Your',
                 ),
-              ),
-            ]),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextFormField(
-              cursorColor: Theme.of(context).colorScheme.inversePrimary,
-              decoration: InputDecoration(
-                hintText: "Search your favorite food ",
-                hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                prefixIcon: Container(
-                  margin: const EdgeInsets.only(right: 5, bottom: 5, top: 5),
-                  padding: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                        20), // half of the width or height
-                  ),
-                  child:  Icon(
-                    Icons.search,
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                  ),
-                ),
-                suffixIcon: Container(
-                  margin: const EdgeInsets.only(left: 5, bottom: 5, top: 5),
-                  padding: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                        20), // half of the width or height
-                  ),
-                  child: RotatedBox(
-                    quarterTurns: 3,
-                    child: Icon(
-                      Icons.tune,
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                    ),
-                  ),
-                ),
-                filled: true,
-                fillColor: Theme.of(context).colorScheme.secondary,
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25),
-                  borderSide: BorderSide.none,
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                Text(
-                  'Find ',
+                TextSpan(
+                  text: ' Best',
                   style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  '5km  >',
-                  style: TextStyle(fontSize: 15.0, color: Colors.red),
-                )
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              color: Theme.of(context).colorScheme.tertiary,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    child: Center(
-                      child: Material(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Theme.of(context).colorScheme.inversePrimary,
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0,
-                            vertical: 10.0,
-                          ),
-                          child: Text(
-                            'Salads',
-                            style: TextStyle(color: Theme.of(context).colorScheme.tertiary,)
-                          ),
-                        ),
-                      ),
-                    ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                fontSize: 30,
+                fontFamily: 'OpenSans',
+                color: Theme.of(context).colorScheme.onTertiary,
+              ),
+              children: const [
+                TextSpan(
+                  text: 'Food',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
                   ),
-                  SizedBox(
-                    child: Center(
-                      child: Material(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0,
-                            vertical: 10.0,
-                          ),
-                          child: Text(
-                            'Hot Sales',
-                          ),
-                        ),
-                      ),
-                    ),
+                ),
+                TextSpan(
+                  text: ' Around',
+                ),
+                TextSpan(text: ' You'),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: TextFormField(
+            cursorColor: Theme.of(context).colorScheme.inversePrimary,
+            decoration: InputDecoration(
+              hintText: "Search your favorite food ",
+              hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: Theme.of(context).colorScheme.primary,
                   ),
-                  SizedBox(
-                    child: Center(
-                      child: Material(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0,
-                            vertical: 10.0,
-                          ),
-                          child: Text(
-                            'Popularity',
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+              prefixIcon: Icon(
+                Icons.search,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              suffixIcon: RotatedBox(
+                quarterTurns: 3,
+                child: Icon(
+                  Icons.tune,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+              ),
+              filled: true,
+              fillColor: Theme.of(context).colorScheme.secondary,
+              contentPadding:
+                  const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25),
+                borderSide: BorderSide.none,
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25),
+                borderSide: BorderSide.none,
               ),
             ),
           ),
-        ],
-      ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            // ignore: prefer_const_literals_to_create_immutables
+            children: [
+              Text(
+                'Find ',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Theme.of(context).colorScheme.onTertiary,
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              Text(
+                '5km  >',
+                style: TextStyle(
+                  fontSize: 15.0,
+                  color: Colors.red,
+                  fontFamily: 'OpenSans',
+                ),
+              )
+            ],
+          ),
+        ),
+        
+        
+      ],
     );
   }
 }
+
