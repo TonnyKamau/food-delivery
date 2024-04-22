@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Header extends StatelessWidget {
- 
   const Header({super.key});
 
   @override
@@ -68,18 +68,26 @@ class Header extends StatelessWidget {
             cursorColor: Theme.of(context).colorScheme.inversePrimary,
             decoration: InputDecoration(
               hintText: "Search your favorite food ",
-              hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+              hintStyle: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
+                    fontSize: 16,
+                    fontFamily: 'OpenSans',
                   ),
-              prefixIcon: Icon(
-                Icons.search,
-                color: Theme.of(context).colorScheme.inversePrimary,
+              prefixIcon: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SvgPicture.asset(
+                  'assets/icons/search.svg',
+                  color: Theme.of(context).colorScheme.onTertiary,
+                ),
               ),
               suffixIcon: RotatedBox(
                 quarterTurns: 3,
-                child: Icon(
-                  Icons.tune,
-                  color: Theme.of(context).colorScheme.inversePrimary,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset(
+                    'assets/icons/slider-01.svg',
+                    color: Theme.of(context).colorScheme.onTertiary,
+                  ),
                 ),
               ),
               filled: true,
@@ -129,10 +137,7 @@ class Header extends StatelessWidget {
             ],
           ),
         ),
-        
-        
       ],
     );
   }
 }
-

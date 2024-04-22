@@ -15,9 +15,10 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
- void login(){
-  Get.toNamed('/home');
- }
+  void login() {
+    Get.toNamed('/home');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
