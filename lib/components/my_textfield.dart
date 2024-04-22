@@ -20,12 +20,12 @@ class MyTextField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: TextStyle(
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.inversePrimary,
             fontFamily: 'OpenSans'
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.tertiary,
+              color: Theme.of(context).colorScheme.onTertiary,
             ),
           ),
           focusedBorder: OutlineInputBorder(

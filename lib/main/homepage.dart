@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_delivery/components/header.dart';
+import 'package:food_delivery/components/my_drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,14 +21,13 @@ class HomePage extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Theme.of(context).colorScheme.background,
           appBar: AppBar(
-            leading: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: IconButton(
-                onPressed: () {},
-                icon: FaIcon(
-                  FontAwesomeIcons.bars,
-                  color: Theme.of(context).colorScheme.inversePrimary,
+            leading: Builder(
+              builder: (context) => IconButton(
+                icon: SvgPicture.asset(
+                  'assets/icons/menu-navigation-grid.svg',
+                  color: Theme.of(context).colorScheme.onTertiary,
                 ),
+                onPressed: () => Scaffold.of(context).openDrawer(),
               ),
             ),
             actions: [
@@ -34,9 +35,9 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: IconButton(
                   onPressed: () {},
-                  icon: FaIcon(
-                    FontAwesomeIcons.magnifyingGlass,
-                    color: Theme.of(context).colorScheme.inversePrimary,
+                  icon: SvgPicture.asset(
+                    'assets/icons/search.svg',
+                    color: Theme.of(context).colorScheme.onTertiary,
                   ),
                 ),
               ),
@@ -44,6 +45,7 @@ class HomePage extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           ),
+          drawer: const MyDrawer(),
           body: ListView(children: [
             const Header(),
             const SizedBox(
@@ -86,6 +88,7 @@ class _Categories extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 16,
                       fontFamily: 'OpenSans',
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),

@@ -15,9 +15,10 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
- void login(){
-  Get.toNamed('/home');
- }
+  void login() {
+    Get.toNamed('/home');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,14 +27,14 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(Icons.lock_open_rounded,
-              size: 100, color: Theme.of(context).colorScheme.inversePrimary),
+              size: 100, color: Theme.of(context).colorScheme.onTertiary),
           const SizedBox(
             height: 25,
           ),
           Text(
             'Food Delivery App',
             style: TextStyle(
-              color: Theme.of(context).colorScheme.inversePrimary,
+              color: Theme.of(context).colorScheme.onTertiary,
               fontSize: 16,
               fontFamily: 'OpenSans',
             ),
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Text(
                   'Sign up',
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,
+                    color: Theme.of(context).colorScheme.onTertiary,
                     fontSize: 16,
                     fontFamily: 'OpenSans',
                     fontWeight: FontWeight.bold,
