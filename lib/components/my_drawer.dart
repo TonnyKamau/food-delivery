@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_delivery/components/my_drawer_tile.dart';
+import 'package:get/get.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -27,23 +28,29 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           MyDrawerTile(
-              text: 'Home',
-              icon: FaIcon(FontAwesomeIcons.house,
-                  color: Theme.of(context).colorScheme.onTertiary,
-                  size: 20),
-              onTap: () {}),
+            text: 'Home',
+            icon: FaIcon(FontAwesomeIcons.house,
+                color: Theme.of(context).colorScheme.onTertiary, size: 20),
+            onTap: () => Navigator.pop(context),
+          ),
           MyDrawerTile(
               text: 'Settings',
-              icon:FaIcon(FontAwesomeIcons.gear,
-                  color: Theme.of(context).colorScheme.onTertiary,
-                  size: 20),
-              onTap: () {}),
+              icon: FaIcon(FontAwesomeIcons.gear,
+                  color: Theme.of(context).colorScheme.onTertiary, size: 20),
+              onTap: () {
+                Navigator.pop(context);
+                Get.toNamed('/settings');
+
+              }),
+        const Spacer(),
           MyDrawerTile(
               text: 'LogOut',
-              icon:FaIcon(FontAwesomeIcons.rightFromBracket,
-                  color: Theme.of(context).colorScheme.onTertiary,
-                  size: 20),
+              icon: FaIcon(FontAwesomeIcons.rightFromBracket,
+                  color: Theme.of(context).colorScheme.onTertiary, size: 20),
               onTap: () {}),
+          const SizedBox(
+            height: 25,
+          )
         ],
       ),
     );
