@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_delivery/components/header.dart';
 import 'package:food_delivery/components/my_drawer.dart';
+import 'package:food_delivery/components/my_appbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,30 +21,18 @@ class HomePage extends StatelessWidget {
         length: tabs.length,
         child: Scaffold(
           backgroundColor: Theme.of(context).colorScheme.background,
-          appBar: AppBar(
-            leading: Builder(
-              builder: (context) => IconButton(
-                icon: SvgPicture.asset(
-                  'assets/icons/menu-navigation-grid.svg',
+         appBar: MyAppBar(
+            title: Center(
+              child: Text(
+                'Home',
+                style: TextStyle(
                   color: Theme.of(context).colorScheme.onTertiary,
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.w600,
                 ),
-                onPressed: () => Scaffold.of(context).openDrawer(),
+              
               ),
             ),
-            actions: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(
-                    'assets/icons/search.svg',
-                    color: Theme.of(context).colorScheme.onTertiary,
-                  ),
-                ),
-              ),
-            ],
-            backgroundColor: Colors.transparent,
-            elevation: 0,
           ),
           drawer: const MyDrawer(),
           body: ListView(children: [

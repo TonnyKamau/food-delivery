@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/auth/login_or_register.dart';
 import 'package:food_delivery/main/homepage.dart';
-import 'package:food_delivery/pages/login_page.dart';
+
+import 'package:food_delivery/pages/settings_page.dart';
 import 'package:food_delivery/themes/theme_provider.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       theme: Provider.of<ThemeProvider>(context).themeData,
       routes: {
         '/home': (context) => const HomePage(),
+        '/settings': (context) => const SettingsPage(),
       },
       home: const LoginOrRegister(),
     );
