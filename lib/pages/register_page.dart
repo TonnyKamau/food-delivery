@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_delivery/components/my_button.dart';
 import 'package:food_delivery/components/my_textfield.dart';
 
@@ -14,7 +15,8 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +25,11 @@ class _RegisterPageState extends State<RegisterPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.lock_open_rounded,
-              size: 100, color: Theme.of(context).colorScheme.onTertiary),
+          SvgPicture.asset(
+            'assets/icons/lock.svg',
+            color: Theme.of(context).colorScheme.onTertiary,
+            height: 100,
+          ),
           const SizedBox(
             height: 25,
           ),
@@ -50,7 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
               controller: passwordController,
               hintText: 'Password',
               obscureText: true),
-              const SizedBox(
+          const SizedBox(
             height: 10,
           ),
           MyTextField(

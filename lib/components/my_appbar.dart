@@ -13,9 +13,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: Builder(
         builder: (context) => IconButton(
-          icon: SvgPicture.asset(
-            'assets/icons/menu-navigation-grid.svg',
-            color: Theme.of(context).colorScheme.onTertiary,
+          icon: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SvgPicture.asset(
+              'assets/icons/menu-navigation-grid.svg',
+              color: Theme.of(context).colorScheme.onTertiary,
+            ),
           ),
           onPressed: () => Scaffold.of(context).openDrawer(),
         ),
@@ -29,7 +32,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: IconButton(
             onPressed: () {},
             icon: SvgPicture.asset(
-              'assets/icons/search.svg',
+              'assets/icons/cart.svg',
               color: Theme.of(context).colorScheme.onTertiary,
             ),
           ),
