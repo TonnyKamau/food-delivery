@@ -15,10 +15,10 @@ class MyDrawer extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 50.0),
-            child: Icon(
-              Icons.lock_open_rounded,
-              size: 100,
+            child: SvgPicture.asset(
+              'assets/icons/lock.svg',
               color: Theme.of(context).colorScheme.onTertiary,
+              height: 100,
             ),
           ),
           Padding(
@@ -29,24 +29,29 @@ class MyDrawer extends StatelessWidget {
           ),
           MyDrawerTile(
             text: 'Home',
-            icon: FaIcon(FontAwesomeIcons.house,
-                color: Theme.of(context).colorScheme.onTertiary, size: 20),
+            icon: SvgPicture.asset(
+              'assets/icons/home-2.svg',
+              color: Theme.of(context).colorScheme.onTertiary,
+            ),
             onTap: () => Navigator.pop(context),
           ),
           MyDrawerTile(
               text: 'Settings',
-              icon: FaIcon(FontAwesomeIcons.gear,
-                  color: Theme.of(context).colorScheme.onTertiary, size: 20),
+              icon: SvgPicture.asset(
+                'assets/icons/settings.svg',
+                color: Theme.of(context).colorScheme.onTertiary,
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Get.toNamed('/settings');
-
               }),
-        const Spacer(),
+          const Spacer(),
           MyDrawerTile(
               text: 'LogOut',
-              icon: FaIcon(FontAwesomeIcons.rightFromBracket,
-                  color: Theme.of(context).colorScheme.onTertiary, size: 20),
+              icon: SvgPicture.asset(
+                'assets/icons/log-out-exit.svg',
+                color: Theme.of(context).colorScheme.onTertiary,
+              ),
               onTap: () {}),
           const SizedBox(
             height: 25,

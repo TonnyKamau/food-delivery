@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_delivery/components/my_button.dart';
 import 'package:food_delivery/components/my_textfield.dart';
 import 'package:get/get.dart';
@@ -26,8 +27,12 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.lock_open_rounded,
-              size: 100, color: Theme.of(context).colorScheme.onTertiary),
+          SvgPicture.asset(
+            'assets/icons/lock.svg',
+            color: Theme.of(context).colorScheme.onTertiary,
+            height: 100,
+            
+          ),
           const SizedBox(
             height: 25,
           ),

@@ -19,7 +19,13 @@ class SettingsPage extends StatelessWidget {
           ),
           onPressed: () => Get.back(),
         ),
-        title: const Text('Settings'),
+        title: Text('Settings',
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.onTertiary,
+          fontFamily: 'OpenSans',
+          fontWeight: FontWeight.w600,
+        )
+        )
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Column(
