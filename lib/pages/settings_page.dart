@@ -27,7 +27,7 @@ class SettingsPage extends StatelessWidget {
         )
         )
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Column(
         children: [
           Container(

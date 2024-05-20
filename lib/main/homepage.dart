@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       drawer: const MyDrawer(),
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
@@ -54,14 +54,42 @@ class _HomePageState extends State<HomePage>
                     color: Theme.of(context).colorScheme.secondary,
                   ),
                   //my current location
-                  MyCurrentLocation(),
+                  const MyCurrentLocation(),
                   //my description box
-                  MyDescriptionBox(),
+                  const MyDescriptionBox(),
                 ],
               )),
         ],
-        body: Container(
-          color: Colors.blue,
+        body: TabBarView(
+          controller: _tabController,
+          children: tabs.map((tab) {
+            return GridView.builder(
+              itemCount: 30, // Replace with your item count
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, // Number of columns
+                crossAxisSpacing: 10.0,
+                mainAxisSpacing: 10.0,
+                childAspectRatio: 2 / 3, // Adjust the aspect ratio as needed
+              ),
+              itemBuilder: (context, index) {
+                return Container(
+                  padding: EdgeInsets.only(
+                    top: index == 0
+                        ? 0.0
+                        : 8.0, // Apply no top padding to the first item
+                    left: 8.0,
+                    right: 8.0,
+                    bottom: 8.0,
+                  ),
+                  child: Card(
+                    child: Center(
+                      child: Text('$tab Item $index'),
+                    ),
+                  ),
+                );
+              },
+            );
+          }).toList(),
         ),
       ),
     );

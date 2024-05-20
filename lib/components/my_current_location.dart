@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:lucide_icons/lucide_icons.dart';
 
 class MyCurrentLocation extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyCurrentLocation extends StatelessWidget {
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                title: Text('Your Location'),
+                title: const Text('Your Location'),
                 content: TextField(
                   decoration: InputDecoration(
                     hintText: 'Enter your location',
@@ -23,10 +23,11 @@ class MyCurrentLocation extends StatelessWidget {
                 actions: [
                   MaterialButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text('Cancel',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.onTertiary,
-                    ),
+                    child: Text(
+                      'Cancel',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onTertiary,
+                      ),
                     ),
                   ),
                   MaterialButton(
