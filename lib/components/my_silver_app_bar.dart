@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class MySilverAppBar extends StatelessWidget {
   final Widget title;
@@ -17,7 +18,7 @@ class MySilverAppBar extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () => Get.toNamed('/cart'),
             icon: SvgPicture.asset(
               'assets/icons/cart.svg',
               color: Theme.of(context).colorScheme.onTertiary,
