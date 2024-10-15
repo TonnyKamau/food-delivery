@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 
 class FoodModel extends Equatable {
   final String name;
@@ -14,7 +13,7 @@ class FoodModel extends Equatable {
   final List<String> ingredients;
   final String rating;
 
-  FoodModel({
+  const FoodModel({
     required this.name,
     required this.image,
     required this.price,
@@ -39,7 +38,7 @@ class FoodModel extends Equatable {
       id: 1,
       calories: '320',
       preparationTime: '15',
-      ingredients: [
+      ingredients: const [
         'Salmon',
         'Lettuce',
         'Tomato',
@@ -62,7 +61,7 @@ class FoodModel extends Equatable {
       id: 2,
       calories: '120',
       preparationTime: '10',
-      ingredients: [
+      ingredients: const [
         'Apple',
         'Banana',
         'Orange',
@@ -84,7 +83,7 @@ class FoodModel extends Equatable {
       id: 3,
       calories: '450',
       preparationTime: '20',
-      ingredients: [
+      ingredients: const [
         'Pasta',
         'Tomato',
         'Basil',
@@ -105,7 +104,7 @@ class FoodModel extends Equatable {
       id: 3,
       calories: '450',
       preparationTime: '20',
-      ingredients: [
+      ingredients: const [
         'Pasta',
         'Tomato',
         'Basil',
@@ -116,7 +115,7 @@ class FoodModel extends Equatable {
       rating: '4.5',
       isFavorite: false,
     ),
-  
+
     FoodModel(
       name: 'Pizza',
       image:
@@ -127,7 +126,7 @@ class FoodModel extends Equatable {
       id: 4,
       calories: '350',
       preparationTime: '30',
-      ingredients: [
+      ingredients: const [
         'Pizza dough',
         'Tomato sauce',
         'Mozzarella cheese',
@@ -149,7 +148,7 @@ class FoodModel extends Equatable {
       id: 5,
       calories: '500',
       preparationTime: '25',
-      ingredients: [
+      ingredients: const [
         'Burger bun',
         'Beef patty',
         'Lettuce',
@@ -164,14 +163,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Sushi',
-      image: 'https://images.unsplash.com/photo-1563612116625-3012372fccce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHN1c2hpfGVufDB8fDB8fHww',
+      image:
+          'https://images.unsplash.com/photo-1563612116625-3012372fccce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHN1c2hpfGVufDB8fDB8fHww',
       price: 30.00,
       description: 'Sushi with fresh fish and rice',
       category: 'Sushi',
       id: 6,
       calories: '400',
       preparationTime: '40',
-      ingredients: [
+      ingredients: const [
         'Sushi rice',
         'Salmon',
         'Tuna',
@@ -194,7 +194,7 @@ class FoodModel extends Equatable {
       id: 5,
       calories: '500',
       preparationTime: '25',
-      ingredients: [
+      ingredients: const [
         'Burger bun',
         'Beef patty',
         'Lettuce',
@@ -209,14 +209,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Sushi',
-      image: 'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHN1c2hpfGVufDB8fDB8fHww',
+      image:
+          'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHN1c2hpfGVufDB8fDB8fHww',
       price: 30.00,
       description: 'Sushi with fresh fish and rice',
       category: 'Sushi',
       id: 6,
       calories: '400',
       preparationTime: '40',
-      ingredients: [
+      ingredients: const [
         'Sushi rice',
         'Salmon',
         'Tuna',
@@ -232,14 +233,15 @@ class FoodModel extends Equatable {
 
     FoodModel(
       name: 'Sushi',
-      image: 'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHN1c2hpfGVufDB8fDB8fHww',
+      image:
+          'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHN1c2hpfGVufDB8fDB8fHww',
       price: 30.00,
       description: 'Sushi with fresh fish and rice',
       category: 'Sushi',
       id: 6,
       calories: '400',
       preparationTime: '40',
-      ingredients: [
+      ingredients: const [
         'Sushi rice',
         'Salmon',
         'Tuna',
@@ -254,14 +256,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Steak',
-      image: 'https://images.unsplash.com/photo-1633436375795-12b3b339712f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0ZWFrfGVufDB8fDB8fHww',
+      image:
+          'https://images.unsplash.com/photo-1633436375795-12b3b339712f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0ZWFrfGVufDB8fDB8fHww',
       price: 28.00,
       description: 'Steak with mashed potatoes and vegetables',
       category: 'Steak',
       id: 7,
       calories: '600',
       preparationTime: '35',
-      ingredients: [
+      ingredients: const [
         'Steak',
         'Potato',
         'Butter',
@@ -277,14 +280,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Steak',
-      image: 'https://images.unsplash.com/photo-1633436375795-12b3b339712f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0ZWFrfGVufDB8fDB8fHww',
+      image:
+          'https://images.unsplash.com/photo-1633436375795-12b3b339712f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0ZWFrfGVufDB8fDB8fHww',
       price: 28.00,
       description: 'Steak with mashed potatoes and vegetables',
       category: 'Steak',
       id: 7,
       calories: '600',
       preparationTime: '35',
-      ingredients: [
+      ingredients: const [
         'Steak',
         'Potato',
         'Butter',
@@ -308,7 +312,7 @@ class FoodModel extends Equatable {
       id: 8,
       calories: '250',
       preparationTime: '5',
-      ingredients: [
+      ingredients: const [
         'Ice cream',
         'Chocolate',
         'Nuts',
@@ -327,7 +331,7 @@ class FoodModel extends Equatable {
       id: 8,
       calories: '250',
       preparationTime: '5',
-      ingredients: [
+      ingredients: const [
         'Ice cream',
         'Chocolate',
         'Nuts',
@@ -337,14 +341,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Cake',
-      image: 'https://images.unsplash.com/photo-1602351447937-745cb720612f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNha2V8ZW58MHx8MHx8fDA%3D',
+      image:
+          'https://images.unsplash.com/photo-1602351447937-745cb720612f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNha2V8ZW58MHx8MHx8fDA%3D',
       price: 10.00,
       description: 'Cake with cream and fruits',
       category: 'Dessert',
       id: 9,
       calories: '300',
       preparationTime: '15',
-      ingredients: [
+      ingredients: const [
         'Cake',
         'Cream',
         'Strawberry',
@@ -356,14 +361,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Cake',
-      image: 'https://images.unsplash.com/photo-1602351447937-745cb720612f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNha2V8ZW58MHx8MHx8fDA%3D',
+      image:
+          'https://images.unsplash.com/photo-1602351447937-745cb720612f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNha2V8ZW58MHx8MHx8fDA%3D',
       price: 10.00,
       description: 'Cake with cream and fruits',
       category: 'Dessert',
       id: 9,
       calories: '300',
       preparationTime: '15',
-      ingredients: [
+      ingredients: const [
         'Cake',
         'Cream',
         'Strawberry',
@@ -375,14 +381,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Coffee',
-      image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image:
+          'https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       price: 5.00,
       description: 'Coffee with milk and sugar',
       category: 'Drink',
       id: 10,
       calories: '100',
       preparationTime: '5',
-      ingredients: [
+      ingredients: const [
         'Coffee',
         'Milk',
         'Sugar',
@@ -392,14 +399,15 @@ class FoodModel extends Equatable {
     ),
     FoodModel(
       name: 'Coffee',
-      image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image:
+          'https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       price: 5.00,
       description: 'Coffee with milk and sugar',
       category: 'Drink',
       id: 10,
       calories: '100',
       preparationTime: '5',
-      ingredients: [
+      ingredients: const [
         'Coffee',
         'Milk',
         'Sugar',

@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -31,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
             'assets/icons/lock.svg',
             color: Theme.of(context).colorScheme.onTertiary,
             height: 100,
-            
           ),
           const SizedBox(
             height: 25,

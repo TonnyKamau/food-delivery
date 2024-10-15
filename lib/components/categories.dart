@@ -26,7 +26,7 @@ class Categories extends StatelessWidget {
               color: Theme.of(context).colorScheme.onTertiary,
             ),
             unselectedLabelColor: Theme.of(context).colorScheme.onTertiary,
-            labelColor: Theme.of(context).colorScheme.background,
+            labelColor: Theme.of(context).colorScheme.surface,
             labelPadding: const EdgeInsets.symmetric(
                 horizontal: 20), // Adjust padding as needed
             tabs: tabs
@@ -76,8 +76,7 @@ class Categories extends StatelessWidget {
                               )
                             : FaIcon(
                                 FontAwesomeIcons.heart,
-                                color:
-                                    Theme.of(context).colorScheme.onTertiary,
+                                color: Theme.of(context).colorScheme.onTertiary,
                               ),
                       ),
                     );

@@ -57,11 +57,10 @@ class FoodCard extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                color: Theme.of(context).colorScheme.onTertiary,
-                fontWeight: FontWeight.w700,
-                fontSize: 16,
-                fontFamily: 'OpenSans'
-              ),
+                  color: Theme.of(context).colorScheme.onTertiary,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 16,
+                  fontFamily: 'OpenSans'),
             ),
           ),
           Padding(
@@ -118,13 +117,10 @@ class FoodCard extends StatelessWidget {
                 Text(
                   price,
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.onTertiary,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 16,
-                    fontFamily: 'OpenSans'
-                  ),
-                
-                  
+                      color: Theme.of(context).colorScheme.onTertiary,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                      fontFamily: 'OpenSans'),
                 ),
                 CircleAvatar(
                   backgroundColor: Theme.of(context).colorScheme.onTertiary,
@@ -132,7 +128,7 @@ class FoodCard extends StatelessWidget {
                   child: Center(
                     child: Icon(
                       Icons.add,
-                      color: Theme.of(context).colorScheme.background,
+                      color: Theme.of(context).colorScheme.surface,
                     ),
                   ),
                 ),

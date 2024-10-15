@@ -18,15 +18,13 @@ class MyButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: Center(
-            child: Text(
-              text,
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.background,
-                fontSize: 16,
-                fontFamily: 'OpenSans',
-                fontWeight: FontWeight.w600,
-              )
-            ),
+            child: Text(text,
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.surface,
+                  fontSize: 16,
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.w600,
+                )),
           ),
         ));
   }

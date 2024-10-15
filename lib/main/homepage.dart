@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_delivery/components/categories.dart';
 import 'package:food_delivery/components/header.dart';
 import 'package:food_delivery/components/my_drawer.dart';
@@ -19,7 +17,7 @@ class HomePage extends StatelessWidget {
         initialIndex: 0,
         length: tabs.length,
         child: Scaffold(
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           appBar: MyAppBar(
             title: Center(
               child: Text(

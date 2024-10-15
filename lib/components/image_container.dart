@@ -12,7 +12,7 @@ class ImageContainer extends StatelessWidget {
   final Widget? child;
   final VoidCallback? onTap;
   const ImageContainer({
-    Key? key,
+    super.key,
     required this.height,
     required this.width,
     required this.imageUrl,
@@ -22,7 +22,7 @@ class ImageContainer extends StatelessWidget {
     this.child,
     this.onTap,
     required this.isFavorite,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

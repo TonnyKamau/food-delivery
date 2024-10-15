@@ -12,22 +12,20 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: SvgPicture.asset(
-            'assets/icons/left-chevron.svg',
-            color: Theme.of(context).colorScheme.onTertiary,
+          leading: IconButton(
+            icon: SvgPicture.asset(
+              'assets/icons/left-chevron.svg',
+              color: Theme.of(context).colorScheme.onTertiary,
+            ),
+            onPressed: () => Get.back(),
           ),
-          onPressed: () => Get.back(),
-        ),
-        title: Text('Settings',
-        style: TextStyle(
-          color: Theme.of(context).colorScheme.onTertiary,
-          fontFamily: 'OpenSans',
-          fontWeight: FontWeight.w600,
-        )
-        )
-      ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+          title: Text('Settings',
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onTertiary,
+                fontFamily: 'OpenSans',
+                fontWeight: FontWeight.w600,
+              ))),
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Column(
         children: [
           Container(
